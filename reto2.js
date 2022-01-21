@@ -1,3 +1,6 @@
+const cupones = [{cupon: "enero22", valor: 15}, {cupon: "CoffeeWhitMilk", valor: 15}, {cupon: "RefenciaADuoArriba", valor: 15}];
+
+const 
 function calcularPrecioConDescuento(precio, descuento){
     const porcentajePrecioConDescuento = 100 - descuento;
     const precioConDescuento = (precio * porcentajePrecioConDescuento) / 100;
