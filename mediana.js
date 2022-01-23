@@ -1,47 +1,53 @@
-const lista1 = [
-    100,
-    200,
-    300,
-    40000000,
-]
+const lista = [];
+// const lista = [40000001, 100, 200, 60, 1500, 300, 400, 500, 40000000];
 
-const mitadLista1 = parseInt(lista1.length / 2);
-
-function calcularMediaAritmetica(lista){
-    // let sumaLista = 0;
-    // for(let i = 0; i < lista.length; i++){
-    //     sumaLista = sumaLista + lista[i];
-    // };
-
-    const sumaLista = lista.reduce(
-        function (valorAcumulado = 0, nuevoElemento) {
-            return valorAcumulado + nuevoElemento;
-        }
-    );
-
-
+function calcularMediaAritmeticaPar(lista) {
+    const sumaLista = lista.reduce(function (valorAcumulado = 0, nuevoElemento) {
+        return valorAcumulado + nuevoElemento;
+    });
     const promedioLista = sumaLista / lista.length;
     return promedioLista;
 }
 
-function esPar(numero) {
-    if (numero % 2 === 0) {
+function esPar(lista) {
+    if (lista % 2 === 0) {
         return true;
     } else {
         return false;
     }
 }
 
+function medianaAritmetica(lista) {
+    const listaOrdenada = lista.sort(function(a,b){return a - b;});
+    console.log(listaOrdenada);
 
-let mediana;
+    const mitadLista = parseInt(lista.length / 2);
 
+    let mediana;
 
-if (esPar(lista1.length)) {
-    const elemento1 = lista1[mitadLista1 - 1];
-    const elemento2 = lista1[mitadLista1];
+    if (esPar(listaOrdenada.length)) {
+        const elemento1 = listaOrdenada[mitadLista - 1];
+        const elemento2 = listaOrdenada[mitadLista];
 
-    const promedio = calcularMediaAritmetica([elemento1, elemento2]);
-    mediana = promedio;
-} else {
-    mediana = lista1[mitadLista1];
+        const promedio = calcularMediaAritmeticaPar([elemento1, elemento2]);
+        mediana = promedio;
+    } else {
+        mediana = lista[mitadLista];
+    }
+    return mediana;
+}
+
+function enviarAlArray(){
+    const input = document.getElementById("Input");
+    const value = Number(input.value);
+
+    var enviar = lista.push(value);
+
+    console.log(enviar);
+}
+
+function calcular(){
+    const resultado = medianaAritmetica(lista);
+    const resultP = document.getElementById("ResultP");
+    resultP.innerText = `El valor de la mediana es: ${resultado}`;
 }
