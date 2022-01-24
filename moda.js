@@ -33,9 +33,9 @@ function enviarAlArray() {
 }
 
 function calcular() {
-    const objecto = makeObjet(datos);
-    console.log(objecto);
-    const listArray = makeNewArray(objecto);
+    const objeto = makeObjet(datos);
+    console.log(objeto);
+    const listArray = makeNewArray(objeto);
     const moda = listArray[listArray.length - 1]
     const resultP = document.getElementById("ResultP");
     resultP.innerText = `El valor de la moda es: ${moda[0]}`;
