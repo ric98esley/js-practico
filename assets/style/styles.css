@@ -43,7 +43,8 @@ header h1 {
     margin-bottom: 24px;
 }
 .nav-header ul {
-    height: 200px;
+    height: 2
+    00px;
     display: flex;
     margin: 0;
     padding: 0;
@@ -60,4 +61,12 @@ header h1 {
 .nav-header ul li:hover{
     cursor: pointer;
     color: var(--brown-mid);
+}
+footer {
+    margin-top: 12px;
+}
+footer p{
+    font-size: var(--sm);
+    color: var(--blue-gray);
+    font-weight: 300;
 }
