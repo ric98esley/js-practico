@@ -5,7 +5,7 @@
     --yellow-sand:#F3E4C6;
     --brown-mid:#8F4F06;
     --white: #fff;
-    --black: #000;
+    --black: #333;
     --text-input-field: #f7f7f7;
     --sm: 14px;
     --md: 16px;
@@ -30,21 +30,23 @@ body {
 header, main, footer {
     width: 320px;
 }
-header {
+.block {
     background-color: var(--very-light-blue);
     border-radius: 16px;
     padding: 24px;
     display: flex;
     flex-direction: column;
+    margin: 14px 0 14px 0;
+    color: var(--black);
 }
 header h1 {
     font-size: var(--x-lg);
     color: var(--blue-sea);
     margin-bottom: 24px;
+    font-weight: bold;
 }
-.nav-header ul {
-    height: 2
-    00px;
+.block .nav-header ul {
+    height: 200px;
     display: flex;
     margin: 0;
     padding: 0;
@@ -61,6 +63,42 @@ header h1 {
 .nav-header ul li:hover{
     cursor: pointer;
     color: var(--brown-mid);
+}
+.labels {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.input input {
+    margin-bottom: 8px;
+    background-color: var(--text-input-field);
+    width: 200px;
+    height: 24px;
+    border-radius: 16px;
+    border: 1px solid var(--blue-gray);
+    color: var(--black);
+    padding: 4px;
+}
+.calculate {
+    display: flex;
+    justify-content: space-evenly;
+}
+.calculate button {
+    margin-bottom: 8px;
+    background-color: var(--blue-sea);
+    width: 100px;
+    height: 24px;
+    border-radius: 16px;
+    border: none;
+    color: var(--white);
+}
+.calculate button:hover {
+    background-color: var(--brown-mid);
+    cursor: pointer;
+}
+.calculate > p {
+    width: 100px;
 }
 footer {
     margin-top: 12px;

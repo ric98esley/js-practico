@@ -4,49 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=z, initial-scale=1.0">
-    <title>Figuras geométricas</title>
+    <link rel="stylesheet" href="../assets/style/styles.css
+    ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <title> Geometric figures</title>
 </head>
 <body>
-    <header><h1>
-        Figuras geométricas
-    </h1>
-    <p>Este es el primer taller del curso práctico de JavaScript</p>
-</header>
-<section>
-    <h2> Calcula el área y perimetro de un cuadrado</h2>
-    <form action="">
-        <label for="InputCuadrado">Escribe cuánto mide cada lado del cuadrado</label>
-        <input id="InputCuadrado" type="number">
+    <header>
+        <h1>
+            <i class="fas fa-shapes"></i> Geometric figures
+        </h1>
+    </header>
+    <main>
+        <div class="square block">
+            <h2> Square</h2>
+            <form action="">
+                <div class="input labels">
+                    <label for="InputSquare">How long is the side of the square?</label>
+                    <input id="InputSquare" type="number" placeholder="Example 8">
+                </div>
+                <div class="calculate">
+                    <button type="button" onclick="calculatePerimeterSquare()">Perimeter</button>
+                    <p id="SquarePerimeter"></p>
+                </div>
+                <div class="calculate">
+                    <button type="button" onclick="calculateAreaSquare()">Area</button>
+                    <p id="SquareArea"></p>
+                </div>
+            </form>
+        </div>
+        <div class="triangle block">
+            <h2>Triangle</h2>
+            <form action="" >
+                <div class="input labels">
+                    <label for="SideA">How long is side A?</label>
+                <input id="SideA" type="number">
+                </div>
+                <div class="input labels">
+                    <label for="SideB">How long is side B?</label>
+                <input id="SideB" type="number">
+                </div>
+                <div class="input labels">
+                    <label for="Base">How long is base?</label>
+                <input id="Base" type="number">
+                </div>
+                <div class="calculate">
+                    <button type="button" onclick="calculateIsoTriangleHeight()">height</button>
+                    <p id="TriangleHeight"></p>
+                </div>
+                <div class="calculate">
+                    <button type="button" onclick="calculatePerimeterTriangle()">Perimeter</button>
+                    <p id="TrianglePerimeter"></p>
+                </div>
+                <div class="calculate">
+                    <button type="button" onclick="calculartriangleArea()">Area</button>
+                    <p id="TriangleArea"></p>
+                </div>
+            </form>
+        </div>
+        <div class="circle block">
+            <h2>Circle</h2>
+            <form action="">
+                <div class="input labels">
+                    <label for="Radio">Escribe cuánto mide el Radio</label>
+                    <input id="Radio" type="number">
+                </div>
+                <div class="calculate">
+                    <button type="button" onclick="calcularCircunferencia()">Perimeter</button>
+                    <p id="PerimeterArea"></p>
+                </div>
+                <div class="calculate">
+                    <button type="button" onclick="calcularAreaCirculo()">Area</button>
+                    <p id="CircleArea"></p>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="./square.js"></script>
+    <script src="./triangle.js"></script>
+    <script src="./circle.js"></script>
+    <script src="https://kit.fontawesome.com/82d3d63f3c.js" crossorigin="anonymous"></script>
 
-        <button type="button" onclick="calcularPerimetroCuadrado()">Calcular perimetro</button>
-        <button type="button" onclick="calcularAreaCuadrado()">Calular área</button>
-    </form>
-    <form action="">
-        <label for="LadoA">Escribe cuánto mide el lado A</label>
-        <input id="LadoA" type="number">
-
-        <label for="LadoB">Escribe cuánto mide el lado B</label>
-        <input id="LadoB" type="number">
-
-        <label for="Base">Escribe cuánto mide la base</label>
-        <input id="Base" type="number">
-
-        <label for="Altura">Escribe cuánto mide la altura</label>
-        <input id="Altura" type="number">
-
-        <button type="button" onclick="calcularPerimetroTriangulo()">Calcular perimetro</button>
-        <button type="button" onclick="calcularAreaTriangulo()">Calular área</button>
-    </form>
-
-    <form action="">
-        <label for="Radio">Escribe cuánto mide el Radio</label>
-        <input id="Radio" type="number">
-
-        <button type="button" onclick="calcularCircunferencia()">Calcular perimetro</button>
-        <button type="button" onclick="calcularAreaCirculo()">Calular área</button>
-    </form>
-
-</section>
-    <script src="./figuras.js"></script>
 </body>
 </html>
