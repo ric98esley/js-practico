@@ -10,8 +10,19 @@
         //height
     function IsoTriangleHeight(base, side1) {
         return Math.sqrt((side1 * side1) - ((base * base) / 4))
-};
-// Triangulo
+    };
+    function heronForm(base,sideA,sideB){
+        const s = (base + sideA + sideB) /2;
+        const he = Math.sqrt(s *(s-base) *(s-sideA) *(s-sideB))
+        console.log(he);
+        return he;
+    }
+    function TriangleHeightHeron(base,side1,side2){
+        const heron = heronForm(base, side1, side2);
+        const height = (2/base) * heron;
+        return height;
+    }
+// Triangle
 
 function calculateIsoTriangleHeight() {
     const sideA = document.getElementById("SideA");
@@ -22,15 +33,18 @@ function calculateIsoTriangleHeight() {
 
     const base = document.getElementById("Base");
     const valueC = Number(base.value);
+    let height
     if (valueA == valueB) {
-        const height = IsoTriangleHeight(valueA, valueC);
+        height = IsoTriangleHeight(valueA, valueC);
         const resultP = document.getElementById("TriangleHeight");
         resultP.innerText = `${height.toFixed(2)}`;
     }
     else {
+        height = TriangleHeightHeron(valueC,valueB,valueA);
         const resultP = document.getElementById("TriangleHeight");
-        resultP.innerText = `Isn't a Isocele Triangle`;
+        resultP.innerText = `${height.toFixed(2)}`;
     }
+    return height
 }
 
 // Triangulo
@@ -48,15 +62,13 @@ function calculatePerimeterTriangle(){
     const resultP = document.getElementById("TrianglePerimeter");
     resultP.innerText = `${perimeter}`;
 }
-function calculartriangleArea(){
-    calculateIsoTriangleHeight();
-    const sideA = document.getElementById("TriangleHeight");
-    const valueA = Number(sideA.innerHTML);
+function calculatetriangleArea(){
+    const valueA = calculateIsoTriangleHeight();
 
     const base = document.getElementById("Base");
     const valueC = Number(base.value);
 
     const area = triangleArea(valueA, valueC);
     const resultP = document.getElementById("TriangleArea");
-    resultP.innerText = `${area}`;
+    resultP.innerText = `${area.toFixed(2)}`;
 }

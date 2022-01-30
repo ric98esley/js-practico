@@ -18,16 +18,20 @@
     box-sizing: border-box;
 
 }
+.header-index {
+    height: 100vh;
+}
 body {
     font-family: 'Lexend', sans-serif;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
+    align-content: center;
     justify-content: center;
-    height: 100vh;
 }
 header, main, footer {
+    margin-top: 24px;
     width: 320px;
 }
 .block {
@@ -54,13 +58,18 @@ header h1 {
     justify-content: space-around;
 }
 .nav-header ul li{
+    text-decoration: none;
     margin-bottom: 18px;
     list-style: none;
     text-align: right;
     font-size: var(--md);
     color: var(--blue-gray);
 }
-.nav-header ul li:hover{
+.nav-header ul li a{
+    color: var(--blue-gray);
+    text-decoration: none;
+}
+.nav-header ul li a:hover{
     cursor: pointer;
     color: var(--brown-mid);
 }
