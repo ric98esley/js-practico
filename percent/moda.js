@@ -1,6 +1,3 @@
-var datos = [];
-
-
 function makeObjet(list){
     let obj = {};
     list.map(
@@ -25,18 +22,15 @@ function makeNewArray(listCount){
 }
 
 
-function enviarAlArray() {
-    const input = document.getElementById("Input");
+function calculateMode() {
+    const input = document.getElementById("InputAritmetic");
     const value = input.value;
-//     var enviar = datos.push(value);
-    datos = value.split(",");
-}
-
-function calcular() {
-    const objeto = makeObjet(datos);
+    console.log(value);
+    const lista = value.split(",");
+    const objeto = makeObjet(lista);
     console.log(objeto);
     const listArray = makeNewArray(objeto);
     const moda = listArray[listArray.length - 1]
-    const resultP = document.getElementById("ResultP");
+    const resultP = document.getElementById("ResultMode");
     resultP.innerText = `El valor de la moda es: ${moda[0]}`;
 }

@@ -1,9 +1,8 @@
-const lista = [];
 // const lista = [40000001, 100, 200, 60, 1500, 300, 400, 500, 40000000];
 
 function calcularMediaAritmeticaPar(lista) {
     const sumaLista = lista.reduce(function (valorAcumulado = 0, nuevoElemento) {
-        return valorAcumulado + nuevoElemento;
+        return Number(valorAcumulado) + Number(nuevoElemento);
     });
     const promedioLista = sumaLista / lista.length;
     return promedioLista;
@@ -37,17 +36,13 @@ function medianaAritmetica(lista) {
     return mediana;
 }
 
-function enviarAlArray(){
-    const input = document.getElementById("Input");
-    const value = Number(input.value);
+function calculateMedian(){
+    const input = document.getElementById("InputAritmetic");
+    const value = input.value;
+    console.log(value);
 
-    var enviar = lista.push(value);
-
-    console.log(enviar);
-}
-
-function calcular(){
+    const lista = value.split(",");
     const resultado = medianaAritmetica(lista);
-    const resultP = document.getElementById("ResultP");
+    const resultP = document.getElementById("ResultMedian");
     resultP.innerText = `El valor de la mediana es: ${resultado}`;
 }

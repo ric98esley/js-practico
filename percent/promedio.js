@@ -1,20 +1,26 @@
-const lista1 = [
-    100,
-    200,
-    300,
-    500,
-]
+// Helpers
+    function calcularMediaAritmetica(lista){
+
+        const sumaLista = lista.reduce(
+            function (valorAcumulado = 0, nuevoElemento) {
+                return Number(valorAcumulado) + Number(nuevoElemento);
+            }
+        );
 
 
-function calcularMediaAritmetica(lista){
+        const promedioLista = sumaLista / lista.length;
+        return promedioLista;
+    }
 
-    const sumaLista = lista.reduce(
-        function (valorAcumulado = 0, nuevoElemento) {
-            return valorAcumulado + nuevoElemento;
-        }
-    );
+//  Average
 
 
-    const promedioLista = sumaLista / lista.length;
-    return promedioLista;
+function calculateAverage() {
+    const input = document.getElementById("InputAritmetic");
+    const value = input.value;
+    const lista = value.split(",");
+    console.log(lista);
+    const average = calcularMediaAritmetica(lista)
+    const resultP = document.getElementById("ResultAverage");
+    resultP.innerText = `El valor de la media es: ${average}`;
 }
