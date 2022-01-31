@@ -26,11 +26,11 @@ function calculateMode() {
     const input = document.getElementById("InputAritmetic");
     const value = input.value;
     console.log(value);
-    const lista = value.split(",");
-    const objeto = makeObjet(lista);
-    console.log(objeto);
-    const listArray = makeNewArray(objeto);
-    const moda = listArray[listArray.length - 1]
+    const list = value.split(",");
+    const objet = makeObjet(list);
+    console.log(objet);
+    const listArray = makeNewArray(objet);
+    const mode = listArray[listArray.length - 1]
     const resultP = document.getElementById("ResultMode");
-    resultP.innerText = `El valor de la moda es: ${moda[0]}`;
+    resultP.innerText = `${mode[0]}`;
 }
