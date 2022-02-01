@@ -8,7 +8,7 @@
         return (base * altura) / 2;
     };
         //height
-    function IsoTriangleHeight(base, side1) {
+    function IsoTriangleHeight(side1,base ) {
         return Math.sqrt((side1 * side1) - ((base * base) / 4))
     };
     function heronForm(base,sideA,sideB){
