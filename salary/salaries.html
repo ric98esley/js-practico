@@ -14,8 +14,40 @@
     <header>
         <h1><i class="fas fa-file-invoice-dollar"></i> Salary analysis</h1>
     </header>
+    <main>
+        <section class="block">
+            <h2>Borrowing capacity</h2>
+            <form action="">
+                <div class="input labels">
+                        <label for="">Enter the total amount of your Earnings</label>
+                        <input type="number" id="InputSalary">
+                </div>
 
+                <div class="input labels">
+                    <label for="InputExpense">Enter the amount of your expenses</label>
+                    <input type="number" id="InputExpense">
+                </div>
+                <div class="input labels">
+                    <label for="inputPorcent">Enter the amount of your porcent</label>
+                    <select name="transporte" id="inputPorcent">
+                        <option value="30">30%</option>
+                        <option value="35">35%</option>
+                        <option value="40">40%</option>
+                    </select>
+                </div>
+                <div class="calculate">
+                    <button type="button" onclick="calculateSaving()">
+                        Borrowing capacity
+                    </button>
+                    <p id="ResultBorrowing"></p>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="./borrowing_capacity.js"></script>
     <script src="./salarios.js"></script>
     <script src="./analisis.js"></script>
+    <script src="https://kit.fontawesome.com/82d3d63f3c.js" crossorigin="anonymous"></script>
+
 </body>
 </html>

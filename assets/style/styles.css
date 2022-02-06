@@ -78,7 +78,7 @@ header h1 {
     flex-wrap: wrap;
     align-items: center;
 }
-.input input {
+.input select, .input input {
     margin-bottom: 8px;
     background-color: var(--text-input-field);
     width: 200px;
@@ -94,9 +94,10 @@ header h1 {
 }
 .calculate button {
     margin-bottom: 8px;
+    padding: 4px 0 4px 0;
     background-color: var(--blue-sea);
     width: 100px;
-    height: 24px;
+    min-height: 24px;
     border-radius: 16px;
     border: none;
     color: var(--white);
@@ -104,6 +105,7 @@ header h1 {
 .calculate button:hover {
     background-color: var(--brown-mid);
     cursor: pointer;
+    border: none;
 }
 .calculate > p {
     width: 100px;
