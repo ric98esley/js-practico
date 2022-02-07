@@ -42,7 +42,25 @@ header, main, footer {
     margin: 0 0 14px 0;
     color: var(--black);
 }
-header h1 {
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+}
+header > h1 {
+    width: 90%;
+}
+header > a {
+    width: 10%;
+}
+header a i {
+    width: var(--x-lg);
+    color: var(--blue-gray);
+    height: var(--x-lg);
+
+}
+.header-title ,header h1 {
     font-size: var(--x-lg);
     color: var(--blue-sea);
     margin-bottom: 12px;
