@@ -1,4 +1,4 @@
-![Page](https://ric98esley.github.io/js-practico/)
+[Page](https://ric98esley.github.io/js-practico/)
 # js-practico
 
 Curso practico de JS
